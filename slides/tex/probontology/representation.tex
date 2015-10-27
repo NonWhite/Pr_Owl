@@ -1,0 +1,50 @@
+\subsection{Representation}
+
+\begin{frame}
+	\centering{\Large{How to represent \alert{probabilistic} ontologies?}}
+	\pause
+	\begin{block}{Some possible solutions}
+		\begin{itemize}
+			\item Plates
+			\begin{itemize}
+				\item Represent fragments of graphical models
+				\item Very useful with continuous attribute values
+				\item Can not represent directly uncertainty
+			\end{itemize}
+			\pause
+			\item Bayesian Networks (BNs)
+			\begin{itemize}
+				\item Represent uncertainty
+				\item Limited to attribute-value representation
+			\end{itemize}
+			\pause
+			\item Hidden Markov Models
+			\begin{itemize}
+				\item They are a special case of Dyanmic BNs
+				\item Capability for recursion
+			\end{itemize}
+		\end{itemize}
+	\end{block}
+\end{frame}
+
+\begin{frame}
+	\centering{\Large{How to represent \alert{probabilistic} ontologies?}}
+	\begin{block}{Some possible solutions}
+		\begin{itemize}
+			\item Probabilistic Relational Models
+			\begin{itemize}
+				\item Extend BNs to handle multiple entity types
+				\item Can not express quantified first-order sentences
+				\item Does not support recursion
+			\end{itemize}
+			\pause
+			\item DAPER
+			\begin{itemize}
+				\item Combine entity-relational model with DAGs models
+				\item Express probabilistic knowledge
+				\item Does not support quantifiers
+			\end{itemize}
+		\end{itemize}
+	\end{block}
+	All of these representations can not successfully combine \alert{Logic} and \alert{Uncertainty}
+\end{frame}
