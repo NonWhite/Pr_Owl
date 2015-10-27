@@ -1,0 +1,25 @@
+\section{Resumo}
+\label{sec:resumo}
+
+O conceito da web semántica é uma ideia de Tim Berners-Lee: ``Web semántica é uma extensão da web comum em que a informação tem um melhor definido significado para os computadores e a cooperação das pessoas''~\cite{BernersLee01}. Em outras palavras, mudar a interconexão da web comum a um gigantesco banco de dados relacionado.
+
+O problema com aquela ideia de web semántica é que na web atual existem as seguintes situações:
+\begin{itemize}
+	\item Amplidão: Na web existem milhões de páginas
+	\item Não definição única de termos: Existem termos como alto e jovem que são subjetivos
+	\item Incerteza: Conceitos que tem incerteza, por exemplo sintomas de uma doença podem ser de alguma outra com outra probabilidade
+	\item Inconsistencia: Existem contradições lógicas
+	\item Engano: A informação obtida não é sempre confiável
+\end{itemize}
+
+No ano 2004, World Wide Web Consortium estabeleceu como padrão a linguagem OWL (Web Ontology Language) para representar ontologias que eram a principal representação para conseguir uma web semántica. Uma ontologia é uma representação formal de conhecimento baseada na lógica de descrição que inclui tipos de entidades (e.g. Pessoa, Companhia), propriedades de aquelas entidades (e.g. nome, sobrenome), relações entre entidades (e.g. paiDe) e eventos que acontecem com aquelas entidades. Devido a que está baseada em lógica, existe a possibilidade de fazer inferências sobre os fatos estabelecidos. Além disso, também pode ser usada para ajudar aos motores de busca responder a perguntas mais complexas.
+
+O principal problema de usar as ontologias comuns e OWL como medios para obter a web semántica é que a web atual tem incerteza em muitos conceitos. A incerteza poderia estar não só em tipos de entidades (e.g. Python é uma linguagem de programação ou um animal), se não também em propriedades ou relações que tem diferentes comportamentos em diferentes domínios (e.g. limpo pode significar que não tem registros policiais, ou que não está sujo). Tendo isto em consideração, existe uma necessidade de encontrar uma representação que use tanto lógica como teoria de probabilidades para representar o conhecimento e também de extender a linguagem OWL para ter suporte de probabilidades.
+
+Aquela representação precisada pode ser encontrada extendendo o conceito de ontologias a ontologias probabilísticas. As ontologias probabilísticas estendem o conceito das ontologias comuns para lidar com incerteza sobre conceitos ambíguos, não confiáveis ou incompletos, sejam estos relacionados com tipos, propriedades ou relações. Existem varias abordagens feitas para encontrar um jeito de representar um modelo de conhecimento baseado na lógica que lide com incerteza ao mesmo tempo. Entre as principais estão Hidden Markov Models (HMM), Bayesian Networks (BNs), Probabilistic Relational Models (PRM), entre outras~\cite{Costa10}, mas todas elas tem desvantagens ou não conseguem combinar ambas coisas satisfatoriamente.
+
+Mas no ano 2008, Laskey conseguiu desenvolver a primeira representação que combina lógica com incerteza de forma satisfatoria. Aquela representação está baseada em um tipo de rede bayesiana chamado Multi-Entity Bayesian Network (MEBN) onde cada sentença em lógica de primeira ordem pode ser representada como um fragmento ou MFrag. Cada um desses fragmentos tem distribuições de probabilidades locais e o conjunto de MFrags construi toda a base de conhecimento~\cite{Laskey08}.
+
+Usando MEBNs foi desenvolvida a extensão da linguagem OWL com incerteza, chamada PR-OWL (Probabilistic Web Ontology Language) que conseguia adicionar probabilidades a conjuntos de variáveis que dependem de outras. Dito de outra forma, para cada sentença lógica representada em um MEBN e suas instâncias possíveis, podiam ser adicionadas probabilidades.
+
+Por último, com aqueles dois conceitos: probabilistic ontologies e PR-OWL já definidos formalmente foram desenvolvidos alguns estudos como a implementação de uma ferramenta gráfica para modelar ontologias probabilísticas baseadas en MEBNs chamada UnBBayes~\cite{UnBBayes08}. Da mesma forma, usando aquela nova ferramenta foram feitos mais estudos em situações do mundo real como o modelamento de uma ontologia marítima~\cite{Laskey11} e outra para o reconhecimento de fraudes em Brasil~\cite{Rommel13}.
