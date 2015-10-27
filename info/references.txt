@@ -1,2 +1,6 @@
 OFFICIAL SITE:
 	http://www.pr-owl.org/
+
+OTHER LINKS:
+	http://link.springer.com/chapter/10.1007%2F978-3-642-35975-0_2
+	http://ceur-ws.org/Vol-808/STIDS2011_CR_T10_LaskeyEtAl.pdf
